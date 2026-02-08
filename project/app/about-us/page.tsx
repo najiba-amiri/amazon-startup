@@ -2,7 +2,7 @@
 "use client";
 
 const team = [
-  { name: "Idres Allawdin", role: "Full Stack Developer" },
+  { name: "Edris Alowdin", role: "Full Stack Developer" },
   { name: "Najiba Amiri", role: "UI/UX Designer" },
   { name: "Haider Rezai", role: "Python / Django Mentor" },
 ];
