@@ -1,6 +1,7 @@
 // app/about-us/page.jsx
 "use client";
-
+import React from "react";
+import Image from "next/image"
 const team = [
   { name: "Idres Allawdin", role: "Full Stack Developer" },
   { name: "Najiba Amiri", role: "UI/UX Designer" },
@@ -64,7 +65,8 @@ export default function AboutUs() {
         <h2 className="text-3xl font-bold text-center mb-8">تیم ما</h2>
           <div className="grid md:grid-cols-3 gap-6">
           {team.map((member, i) => (
-            <div key={i} className="bg-white p-6 rounded-lg shadow border-t-4 border-green-600 text-center">
+            <div key={i} className="bg-white p-6 rounded-lg shadow border-t-4 border-green-600 text-center ">
+            <Image src="/amazon.jpg" alt="Logo" width={100} height={50} className="mx-auto"/>
               <h3 className="text-xl font-bold">{member.name}</h3>
               <p className="text-gray-600">{member.role}</p>
             </div>
