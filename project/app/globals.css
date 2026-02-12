@@ -1,2 +1,41 @@
 @import "tailwindcss";
+@tailwind utilities;
 
+<<<<<<< HEAD
+=======
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-primary-500: #21a07f; /* سبز اصلی هدر و فوتر */
+  --color-accent-500: #feba0f;  /* زرد دکمه‌ها و لینک‌های فعال */
+  --color-background-100: #f1f2ec; /* پس زمینه روشن */
+  --color-text-900: #313333; /* متن تیره */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+.hero-angled-bg {
+  background-color: var(--color-primary-500); 
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); 
+}
+
+
+body {
+  color: var(--color-text-900);
+  background-color: var(--color-background-100);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+>>>>>>> 1a980e80d3aeec718d6414cb2246c1e5d274afdd
