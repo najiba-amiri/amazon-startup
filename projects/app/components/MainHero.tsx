@@ -1,4 +1,5 @@
 // src/components/MainHero.tsx
+"use client";
 import Hero from "./Hero";
 import { Search } from "lucide-react";
 
