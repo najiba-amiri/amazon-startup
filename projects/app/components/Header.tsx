@@ -79,7 +79,7 @@ function GreenNav({ scrolled }: { scrolled: boolean }) {
           </Link>
         </li>
         <li>
-          <Link href="/projects" className="hover:text-yellow-300 transition">
+          <Link href="/project" className="hover:text-yellow-300 transition">
             پروژه‌ها
           </Link>
         </li>
