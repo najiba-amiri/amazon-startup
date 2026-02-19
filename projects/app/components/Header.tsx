@@ -5,9 +5,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Form from "../components/form";
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -16,7 +19,7 @@ export default function Header() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* 1. دیو سفید پس‌زمینه با سایه ملایم روی هیرو */}
@@ -40,18 +43,16 @@ export default function Header() {
 
 function GreenNav({ scrolled }: { scrolled: boolean }) {
   return (
-    <nav
+    <><nav
       dir="rtl"
       className={`
         transition-all duration-500 ease-in-out
         rounded-full bg-primary-500
         flex items-center justify-between
         shadow-md :
-        ${
-          scrolled
-            ? "w-[90%] max-w-6xl px-8 py-1.5"
-            : "w-[94%] max-w-7xl px-10 py-2.5"
-        }
+        ${scrolled
+          ? "w-[90%] max-w-6xl px-8 py-1.5"
+          : "w-[94%] max-w-7xl px-10 py-2.5"}
       `}
     >
       {/* Logo */}
@@ -62,8 +63,7 @@ function GreenNav({ scrolled }: { scrolled: boolean }) {
           width={scrolled ? 50 : 60}
           height={scrolled ? 50 : 60}
           className="object-contain transition-all duration-500"
-          priority
-        />
+          priority />
       </Link>
 
       {/* Menu */}
@@ -96,8 +96,13 @@ function GreenNav({ scrolled }: { scrolled: boolean }) {
         className={`rounded-full bg-yellow-400 font-semibold text-emerald-900 hover:bg-yellow-300 transition-all duration-500
           ${scrolled ? "px-5 py-1.5 text-xs" : "px-6 py-2 text-sm"}`}
       >
-        ارتباط با ما
+        register
       </Link>
-    </nav>
+    </nav><div><Form /></div></>
   );
+      
+    
+
+  
+
 }
